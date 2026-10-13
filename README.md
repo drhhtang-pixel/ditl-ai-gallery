@@ -16,6 +16,16 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Environment variables
+
+Local development reads `.env.local` (git-ignored). Keep the real file outside the repo and symlink it in; production values live in the Vercel project settings.
+
+| Variable | Used for |
+|---|---|
+| `AUTH_GOOGLE_ID`, `AUTH_GOOGLE_SECRET` | Google OAuth login (Auth.js) |
+| `SUPABASE_URL`, `SUPABASE_SERVICE_KEY` | Server-side access to the email allowlist |
+| `BOOTSTRAP_ADMIN_EMAIL` | Founding admin; cannot be deleted or demoted from the allowlist |
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
