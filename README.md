@@ -24,7 +24,7 @@ Local development reads `.env.local` (git-ignored). Keep the real file outside t
 |---|---|
 | `AUTH_GOOGLE_ID`, `AUTH_GOOGLE_SECRET` | Google OAuth login (Auth.js) |
 | `SUPABASE_URL`, `SUPABASE_SERVICE_KEY` | Server-side access to the email allowlist |
-| `BOOTSTRAP_ADMIN_EMAIL` | Founding admin; cannot be deleted or demoted from the allowlist |
+| `BOOTSTRAP_ADMIN_EMAIL` | Founding admin; cannot be deleted or demoted from the allowlist. Also shown as the contact address on the 403 page (read at build time) |
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
