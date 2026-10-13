@@ -1,4 +1,6 @@
 export default function ForbiddenPage() {
+  const contactEmail = process.env.BOOTSTRAP_ADMIN_EMAIL
+
   return (
     <main className="flex min-h-screen items-center justify-center bg-gray-50">
       <div className="rounded-2xl bg-white p-10 shadow-md text-center max-w-md">
@@ -8,12 +10,16 @@ export default function ForbiddenPage() {
           您的帳號尚未獲得授權。
           <br />
           請聯絡唐老師{' '}
-          <a
-            href="mailto:drhhtang@gmail.com"
-            className="text-blue-600 hover:underline"
-          >
-            drhhtang@gmail.com
-          </a>{' '}
+          {contactEmail && (
+            <>
+              <a
+                href={`mailto:${contactEmail}`}
+                className="text-blue-600 hover:underline"
+              >
+                {contactEmail}
+              </a>{' '}
+            </>
+          )}
           申請存取權限。
         </p>
         <a
